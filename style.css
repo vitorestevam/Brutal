@@ -1,7 +1,7 @@
-
 @import url(colors.css);
+
 body {
-    font-family: 'Public Sans' !important;
+    font-family: 'Public Sans';
     line-height: 1.4;
     max-width: 1000px;
     margin: 20px auto;
@@ -10,21 +10,131 @@ body {
     background: var(--light-pink);
 }
 
-button {
+/* headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Kanit';
+}
+
+/* button */
+button,
+input[type=submit] {
     font-family: 'Public Sans';
     font-weight: bold;
     font-size: large;
+
     padding: 20px 40px;
-    margin: 10px 5px;
+    margin: 10px 0px;
     background-color: var(--blue);
-    border-style: solid;
-    border-width: 4px;
-    border-color: black;
-    box-shadow: 4px 4px black;
+
+    border: 0.25rem solid black;
+    box-shadow: 0.25rem 0.25rem black;
 
     transition: box-shadow linear .1s;
 }
 
-button:hover{
+/* button+ button { margin-left: 5px; } */
+
+button:hover,
+input[type=submit]:hover {
     box-shadow: 0px 0px black;
+}
+
+/* forms */
+form {
+    display: inline-block;
+    width: 100%;
+}
+
+fieldset {
+    border: 0.25rem solid black;
+    box-shadow: 0.25rem 0.25rem black;
+}
+
+fieldset legend {
+    font-size: large;
+    font-weight: bold;
+}
+
+label {
+    font-weight: bold;
+    font-size: large;
+}
+
+input{
+    cursor: pointer;
+}
+
+input:not([type]),
+input[type=text],
+input[type=password],
+input[type=email],
+select,
+textarea {
+    height: 3rem;
+    margin: 10px 0px;
+    padding: 1px 2px;
+    width: 95%;
+    box-sizing: inherit;
+
+    border: 0.25rem solid black;
+    box-shadow: 0.25rem 0.25rem black;
+
+    font-family: 'Public Sans';
+    font-size: large;
+
+    transition: box-shadow linear .1s;
+}
+
+input:not([type]):focus,
+input[type=text]:focus,
+input[type=password]:focus,
+input[type=email]:focus,
+select:focus,
+textarea:focus {
+    box-shadow: 0px 0px var(--blue);
+    border-color: var(--blue);
+    outline: none;
+}
+
+textarea {
+    resize: vertical
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+    outline: none;
+    content: none;
+    width: 2rem;
+    height: 2rem;
+    
+    margin-right: 0.75rem;
+    margin-bottom: 0.75rem;
+}
+
+input[type=checkbox]:before {
+    content: "x";
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: bold;
+    color: transparent !important;
+    background: white;
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border: 0.25rem solid black;
+    box-shadow: 0.25rem 0.25rem black;
+}
+
+input[type=checkbox]:checked:before {
+    color: black !important;
+    background-color: var(--blue);
+}
+
+input[type=color]{
+    background-color: black;
 }
