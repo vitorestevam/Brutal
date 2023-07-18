@@ -22,7 +22,7 @@ h6 {
 
 /* button */
 button,
-input[type=submit] {
+input[type=submit]{
     font-family: 'Public Sans';
     font-weight: bold;
     font-size: large;
@@ -35,13 +35,42 @@ input[type=submit] {
     box-shadow: 0.25rem 0.25rem black;
 
     transition: box-shadow linear .1s;
+
+    outline: none;
 }
 
-/* button+ button { margin-left: 5px; } */
-
 button:hover,
-input[type=submit]:hover {
+input[type=submit]:hover,
+button:focus,
+input[type=submit]:focus {
     box-shadow: 0px 0px black;
+}
+
+/* anchor */
+a {
+    color: black;
+    font-weight: bolder;
+}
+
+a:focus {
+    color: var(--blue);
+    outline: none;
+}
+
+/* general  */
+hr {
+    background-color: black;
+    border: 0px;
+    height: 0.25rem;
+}
+
+img {
+    border: 0.25rem solid black;
+    box-shadow: 0.25rem 0.25rem black;
+}
+
+ul{
+    list-style-type: square
 }
 
 /* forms */
@@ -65,7 +94,7 @@ label {
     font-size: large;
 }
 
-input{
+input {
     cursor: pointer;
 }
 
@@ -83,6 +112,7 @@ textarea {
 
     border: 0.25rem solid black;
     box-shadow: 0.25rem 0.25rem black;
+    outline: none;
 
     font-family: 'Public Sans';
     font-size: large;
@@ -94,11 +124,11 @@ input:not([type]):focus,
 input[type=text]:focus,
 input[type=password]:focus,
 input[type=email]:focus,
+input[type=checkbox]:focus:before,
 select:focus,
 textarea:focus {
     box-shadow: 0px 0px var(--blue);
     border-color: var(--blue);
-    outline: none;
 }
 
 textarea {
@@ -111,7 +141,7 @@ input[type=checkbox] {
     content: none;
     width: 2rem;
     height: 2rem;
-    
+
     margin-right: 0.75rem;
     margin-bottom: 0.75rem;
 }
@@ -128,13 +158,44 @@ input[type=checkbox]:before {
     height: 2rem;
     border: 0.25rem solid black;
     box-shadow: 0.25rem 0.25rem black;
+
+    transition: box-shadow linear .1s;
 }
 
 input[type=checkbox]:checked:before {
     color: black !important;
+}
+
+input[type=color] {
+    background-color: black;
+    transition: background-color linear .1s;
+    border: none;
+    outline: none;
+}
+
+input[type=color]:focus {
     background-color: var(--blue);
 }
 
-input[type=color]{
-    background-color: black;
+/* tables */
+
+
+table {
+    border-collapse: collapse;
+    box-shadow: 0.25rem 0.25rem black;
+}
+
+th {
+    font-weight: bold;
+}
+
+table,
+th,
+td {
+    border: 0.25rem solid black;
+}
+
+th,
+td {
+    padding: 0.5rem 1rem;
 }
