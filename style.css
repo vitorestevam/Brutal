@@ -1,13 +1,36 @@
-@import url(colors.css);
+:root {
+    --blue: #87CEEB;
+    --green: #90EE90;
+    --yellow: #F4D738;
+    --red: #FF7A5C;
+    --pink: #FFB2EF;
+    --purple: #A388EE;
+
+    --light-blue: #DAF5F0;
+    --light-green: #DDF5DA;
+    --light-yellow: #FDFD96;
+    --light-orange: #F8D6B3;
+    --light-pink: #FCDFFF;
+    --light-purple: #E3DFF2;
+
+    --background-color: var(--light-yellow);
+    --accent-color: var(--yellow);
+}
 
 body {
     font-family: 'Public Sans';
     line-height: 1.4;
-    max-width: 1000px;
+    padding: 0;
+    margin: 0;
+    color: black;
+    background: var(--background-color);
+}
+
+
+main {
+    max-width: 60rem;
     margin: 20px auto;
     padding: 0 10px;
-    color: black;
-    background: var(--light-pink);
 }
 
 /* headings */
@@ -22,14 +45,15 @@ h6 {
 
 /* button */
 button,
-input[type=submit]{
+input[type=submit],
+input[type=button]:hover {
     font-family: 'Public Sans';
     font-weight: bold;
     font-size: large;
 
     padding: 20px 40px;
     margin: 10px 0px;
-    background-color: var(--blue);
+    background-color: var(--accent-color);
 
     border: 0.25rem solid black;
     box-shadow: 0.25rem 0.25rem black;
@@ -39,11 +63,18 @@ input[type=submit]{
     outline: none;
 }
 
+
 button:hover,
-input[type=submit]:hover,
+input[type=submit]:hover input[type=button]:hover,
 button:focus,
 input[type=submit]:focus {
     box-shadow: 0px 0px black;
+}
+
+button:active,
+input[type=submit]:active,
+input[type=button]:active {
+    filter: brightness(90%);
 }
 
 /* anchor */
@@ -53,7 +84,7 @@ a {
 }
 
 a:focus {
-    color: var(--blue);
+    color: var(--accent-color);
     outline: none;
 }
 
@@ -69,7 +100,7 @@ img {
     box-shadow: 0.25rem 0.25rem black;
 }
 
-ul{
+ul {
     list-style-type: square
 }
 
@@ -127,8 +158,8 @@ input[type=email]:focus,
 input[type=checkbox]:focus:before,
 select:focus,
 textarea:focus {
-    box-shadow: 0px 0px var(--blue);
-    border-color: var(--blue);
+    box-shadow: 0px 0px var(--accent-color);
+    border-color: var(--accent-color);
 }
 
 textarea {
@@ -174,7 +205,7 @@ input[type=color] {
 }
 
 input[type=color]:focus {
-    background-color: var(--blue);
+    background-color: var(--accent-color);
 }
 
 /* tables */
