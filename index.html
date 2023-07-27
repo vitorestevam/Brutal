@@ -1,95 +1,203 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Classless CSS Library Test</title>
-  <style>
-    /* Your classless CSS styles here */
-  </style>
-  <link rel="stylesheet" href="https://unpkg.com/normalize.css@8.0.1/normalize.css" type="text/css">
-  <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
-  <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤘</text></svg>">
+    <title>BRUTAL</title>
 
-  <style>
-    :root {
-      --orange: #ff7a5c;
-      --blue: #9969e7;
-      --light-pink: #fcdfff;
-    }
-  </style>
+    <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        nav a {
+            cursor: pointer;
+        }
+
+        header,
+        footer {
+            max-width: 80rem;
+            margin: 20px auto;
+            padding: 10px 10px;
+        }
+    </style>
 </head>
 
 <body>
-  <header>
-    <h1>BRUTAL</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header id="header" style="position: sticky; top: 0px;background-color: var(--background-color); margin:0px auto;">
+        <div style="display: flex;justify-content: space-between; align-items: center;">
+            <a onclick="scrollToTargetAdjusted('main')" href="#">
+                <h1>BRUTAL</h1>
+            </a>
+            <nav style="gap: 10px; display: flex; ">
+                <button onClick="scrollToTargetAdjusted('forms')">Form fields</button>
+                <button href="#textual">Textual components</button>
+                <button href="#other">Other components</button>
+            </nav>
+        </div>
 
-  <section>
-    <img src="download.jfif" alt="" width="400px">
-  </section>
+        <span><strong>Everything, everywhere, all classless</strong></span>
+        <hr>
+    </header>
 
-  <section>
-    <h2>Section 1</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae feugiat sapien, eget pulvinar quam. Duis
-      sed eleifend tortor.</p>
-  </section>
+    <main id="main">
+        <p><strong>Brutal</strong> is a classless CSS library based on Neo Brutalism ui design trend. It contains styled
+            versions of
+            the main the main components in HTML such as Buttons and Forms.</p>
 
-  <section>
-    <h2>Section 2</h2>
-    <p>Nulla facilisi. Proin interdum ante tellus, eu aliquam odio mollis at. Fusce et dapibus felis, nec dapibus
-      orci. In sodales, tortor a feugiat consequat, velit sem pellentesque dolor, ut tempus ex turpis nec purus.</p>
-  </section>
+        <img src="https://media.tenor.com/I-CiUWVp29AAAAAC/brooklyn-nine-nine-rosa-diaz.gif"
+            alt="A cake written Brutal beign throw on a table and destroyed" width=700 height="400"
+            style="object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
 
-  <section>
-    <h2>Section 3</h2>
-    <p>Phasellus vestibulum fringilla arcu, ut maximus purus lacinia eu. Curabitur vulputate dignissim ante, id
-      commodo massa pharetra a.</p>
-  </section>
+        <p>May I introduce some of the components:</p>
 
-  <div style="width:100%; display: flex; flex-wrap: wrap; gap:10px">
-    <button>Button</button>
+        <h2 id="forms"># Forms</h2>
 
-    <button>Another Button</button>
+        <!-- Form components -->
+        <form onsubmit="return false;">
+            <fieldset>
+                <legend>Please enter your information</legend>
 
-    <button>Another and longer Button</button>
-    <button>Button</button>
-    <button>Button</button>
-  </div>
+                <label for="firstname">First Name</label>
+                <input type="text" name="firstname" id="firstname">
 
-  <!-- Form component -->
-  <form>
-    <fieldset>
-      <legend>Please enter your information</legend>
+                <label for="lastname">Last Name</label>
+                <input type="text" name="lastname" id="lastname">
 
-      <label for="firstname">First Name</label>
-      <input type="text" name="firstname" id="firstname">
+                <label for="os">Operating System</label>
+                <select>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
 
-      <label for="lastname">Last Name</label>
-      <input type="text" name="lastname" id="lastname">
+                <label for="content">Text content</label>
+                <textarea name="content" id="content" placeholder="add the content"></textarea>
 
-      <label for="os">Operating System</label>
-      <select>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
-        <option value="option3">Option 3</option>
-      </select>
+                <input type="submit" value="Send">
 
-      <label for="content">Text content</label>
-      <textarea name="content" id="content" placeholder="add the content"></textarea>
+            </fieldset>
+        </form>
 
-      <input type="submit" value="Send">
+        <!-- textual components -->
+        <h2 id="textual"># Textual components:</h2>
 
-    </fieldset>
-  </form>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+
+        <blockquote>
+            This is a blockquote. Maecenas blandit, quam vel sodales facilisis, urna erat fringilla sem, sed
+            egestas quam erat a ipsum. Morbi fermentum odio felis, ultricies faucibus purus mattis tristique.
+        </blockquote>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan, augue eget lacinia ullamcorper,
+            risus
+            nisl consequat turpis, sagittis molestie dui ante in nulla. Nunc sem justo, facilisis sodales elementum eu,
+            posuere
+            tincidunt tellus. Sed sed quam venenatis, faucibus ante eget, posuere massa. Quisque in sapien magna. Duis
+            dictum id
+            risus et semper. Suspendisse dui justo, tempus nec pretium vitae, semper quis mauris. Ut lacus erat, mattis
+            eu
+            ultrices a, posuere quis diam. Aenean a facilisis felis. Quisque magna felis, varius ac nisi id, pretium
+            suscipit
+            nisi. Maecenas at urna pretium, bibendum massa quis, tristique sem. Pellentesque faucibus mauris quis lacus
+            cursus
+            cursus. Quisque efficitur ut sem scelerisque scelerisque. Nulla aliquet vulputate nisi in accumsan. Integer
+            mi
+            erat,
+            scelerisque a aliquam sed, pulvinar non eros. Mauris vestibulum magna in consectetur aliquam. Duis suscipit
+            arcu
+            lectus, ac imperdiet arcu ornare ut. <strong>This is strong</strong>, <b>this is bold</b>, <em>this is
+                emphasized</em> and <a href='/'>this</a> is a link.
+        </p>
+
+        <h2 id="other"># Other components</h2>
+
+        <h3># Lists and tables</h3>
+
+        <ul>
+            <li>Unordered list item 1</li>
+            <li>Unordered list item 2</li>
+            <li>Unordered list item 3</li>
+        </ul>
+        <ol>
+            <li>Ordered list item 1</li>
+            <li>Ordered list item 2</li>
+            <li>Ordered list item 3</li>
+        </ol>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Godzilla</td>
+                    <td>2</td>
+                    <td>$299.99</td>
+                </tr>
+                <tr>
+                    <td>Mozilla</td>
+                    <td>10</td>
+                    <td>$100,000.00</td>
+                </tr>
+                <tr>
+                    <td>Quesadilla</td>
+                    <td>1</td>
+                    <td>$2.22</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3># Images</h3>
+        <div style="display: flex; width:100%; justify-content: space-between;">
+            <img width=300 height=300 src="https://images3.memedroid.com/images/UPLOADED751/57af4b8eaadce.jpeg"
+                alt="Two akita dogs, one is biting the head of the other in a funny way" style="object-fit: cover;">
+            <img width=300 height=300
+                src="https://bloximages.chicago2.vip.townnews.com/sfweekly.com/content/tncms/assets/v3/editorial/1/1c/11c087d8-49f0-51a7-90b6-e6891bca57ec/63b8b76d74870.image.jpg"
+                alt="The cover of Metalica's Master of the Puppets album, with a bunch of cute pink dressed dogs and master of the puppies writen in place of the album name."
+                style="object-fit: cover;">
+            <img width=300 height=300
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4WtdA5O3wdhP0W8lUm5kMJ4dsgh3VZjcRAQ&usqp=CAU"
+                alt="A light brown dog" style="object-fit: cover;">
+        </div>
+    </main>
+
+
+    <footer>
+        <hr>
+
+        <a href="https://github.com/VitorEstevam/Brutal">github.com/VitorEstevam/Brutal</a>
+        <p>Project Under MIT license</p>
+        <p>Made in Brazil</p>
+    </footer>
 </body>
+
+<script>
+    function scrollToTargetAdjusted(elementname) {
+        var element = document.getElementById(elementname);
+        var headerOffset = document.getElementById("header").offsetHeight;
+        var elementPosition = element.getBoundingClientRect().top;
+        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+        });
+    }
+</script>
 
 </html>
