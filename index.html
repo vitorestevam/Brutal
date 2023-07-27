@@ -8,13 +8,16 @@
         href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤘</text></svg>">
     <title>BRUTAL</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Lexend Mega' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
     <link rel="stylesheet" href="style.css">
-
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/VitorEstevam/Brutal@main/style.css"> -->
 
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
         nav a {
             cursor: pointer;
         }
@@ -23,7 +26,7 @@
         footer {
             max-width: 80rem;
             margin: 20px auto;
-            padding: 10px 10px;
+            padding: 0px 10px;
         }
     </style>
 </head>
@@ -31,21 +34,20 @@
 <body>
     <header id="header" style="position: sticky; top: 0px;background-color: var(--background-color); margin:0px auto;">
         <div style="display: flex;justify-content: space-between; align-items: center;">
-            <a onclick="scrollToTargetAdjusted('main')" href="#">
+            <a href="#">
                 <h1>BRUTAL</h1>
             </a>
-            <nav style="gap: 10px; display: flex; ">
-                <button onClick="scrollToTargetAdjusted('forms')">Form fields</button>
-                <button href="#textual">Textual components</button>
-                <button href="#other">Other components</button>
+            <nav style="gap: 10px; display: flex;">
+                <button onclick="location.href='#forms'" type="button">forms</button>
+                <button onclick="location.href='#textual'" type="button">Texts</button>
+                <button onclick="location.href='#other'" type="button">Other components</button>
             </nav>
         </div>
-
         <span><strong>Everything, everywhere, all classless</strong></span>
         <hr>
     </header>
 
-    <main id="main">
+    <main>
         <p><strong>Brutal</strong> is a classless CSS library based on Neo Brutalism ui design trend. It contains styled
             versions of
             the main the main components in HTML such as Buttons and Forms.</p>
@@ -53,6 +55,23 @@
         <img src="https://media.tenor.com/I-CiUWVp29AAAAAC/brooklyn-nine-nine-rosa-diaz.gif"
             alt="A cake written Brutal beign throw on a table and destroyed" width=700 height="400"
             style="object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
+
+        <p>Use Brutal through CDN by putting the following into your html head:</p>
+
+        <blockquote>
+            <pre><code>&lt;link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'&gt;
+&lt;link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/VitorEstevam/Brutal@main/style.css"&gt;</code></pre>
+        </blockquote>
+
+        <p>And, without adding any css, turn your pages from this, into that</p>
+
+        <div style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap; justify-content: center;">
+            <img style="width: 40%;" src="./demo/old_video_page.png" alt="">
+            <img style="width: 40%;" src="./demo/styled_video_page.png" alt="">
+            <img style="width: 40%;" src="./demo/old_forms.png" alt="">
+            <img style="width: 40%;" src="./demo/new_forms.png" alt="">
+        </div>
 
         <p>May I introduce some of the components:</p>
 
@@ -70,7 +89,7 @@
                 <input type="text" name="lastname" id="lastname">
 
                 <label for="os">Operating System</label>
-                <select>
+                <select id="os">
                     <option value="option1">Option 1</option>
                     <option value="option2">Option 2</option>
                     <option value="option3">Option 3</option>
@@ -85,7 +104,7 @@
         </form>
 
         <!-- textual components -->
-        <h2 id="textual"># Textual components:</h2>
+        <h2 id="textual"># Textual components</h2>
 
         <h1>Heading 1</h1>
         <h2>Heading 2</h2>
@@ -176,28 +195,16 @@
         </div>
     </main>
 
-
     <footer>
         <hr>
-
         <a href="https://github.com/VitorEstevam/Brutal">github.com/VitorEstevam/Brutal</a>
         <p>Project Under MIT license</p>
         <p>Made in Brazil</p>
     </footer>
+
 </body>
-
 <script>
-    function scrollToTargetAdjusted(elementname) {
-        var element = document.getElementById(elementname);
-        var headerOffset = document.getElementById("header").offsetHeight;
-        var elementPosition = element.getBoundingClientRect().top;
-        var offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: "smooth"
-        });
-    }
+    document.documentElement.style.scrollPaddingTop = document.getElementById("header").offsetHeight + "px";
 </script>
 
 </html>
