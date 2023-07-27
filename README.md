@@ -1,4 +1,9 @@
-# Brutal 🚧 WIP
-Neobrutalist classless css library
+# Brutal 
+brutal is a Neobrutalist classless css library
+
 <div align="center"/>
-<img src="./download.jfif" alt= “” width="500px">
+<img src="https://media.tenor.com/I-CiUWVp29AAAAAC/brooklyn-nine-nine-rosa-diaz.gif" alt= “” width="500px">
+
+## Usage
+
+## Demo
