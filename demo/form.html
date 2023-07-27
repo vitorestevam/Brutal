@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User Information Form</title>
+    <link href='https://fonts.googleapis.com/css?family=Public Sans' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kanit' rel='stylesheet'>
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --background-color: var(--light-purple);
+            --accent-color: var(--purple);
+        }
+    </style>
+</head>
+
+<body>
+    <main style="display: flex; flex-direction: row; width: 100%; gap: 40px">
+        <div style="flex:1">
+            <h2>Meet our cause:</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent molestie dui ac augue luctus cursus
+                vitae quis nibh. Aliquam eget est vel justo blandit mattis. Aenean purus eros, maximus sit amet urna id,
+                cursus pretium tellus. Fusce iaculis dui dictum, varius nunc ut, convallis ipsum. Integer quis gravida
+                felis, vel dapibus ligula. Mauris imperdiet quis orci volutpat consectetur. Quisque malesuada porttitor
+                pulvinar. Pellentesque in magna tortor. Duis in orci in elit sodales porta vitae non libero. Aliquam
+                sodales velit quis dolor pulvinar sagittis. Ut quis tortor suscipit, porttitor justo at, sagittis enim.
+                Vestibulum congue nisl vel nisl gravida, sed malesuada magna lobortis. Etiam vehicula non ipsum ac
+                commodo. Pellentesque massa nunc, luctus quis iaculis et, eleifend vitae felis.</p>
+
+            <img style="width: 100%;"
+                src="https://images.squarespace-cdn.com/content/v1/5c879f08ca525b204ff54053/1559811831401-DRY2J9JO36JDRLY6O8PL/IMG_8262.JPG?">
+        </div>
+        <div style="flex:1">
+            <form action="/submit" method="post">
+                <fieldset>
+                    <legend>Send us some info</legend>
+
+                    <label for="name">Your name</label>
+                    <input type="text" name="name" placeholder="Your name">
+                    <label for="email">Your email</label>
+                    <input type="email" name="email" placeholder="Your email">
+                    <label for="cellphone">Your phone number</label>
+                    <input type="text" name="cellphone" placeholder="000000000">
+                    <label for="interest">Are you interested in our cause?</label>
+                    <select id="interest">
+                        <option value="option1">YEAH!</option>
+                        <option value="option2">HMMM, maybe</option>
+                        <option value="option3">No!</option>
+                    </select>
+                    <label for="receive">Do you want to receive emails?</label>
+                    <input type="checkbox" name="receive" checked>
+
+                    <br>
+                    <input type="submit" value="Submit">
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>
