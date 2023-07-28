@@ -21,38 +21,32 @@
         nav a {
             cursor: pointer;
         }
-
-        header,
-        footer {
-            max-width: 80rem;
-            margin: 20px auto;
-            padding: 0px 10px;
-        }
     </style>
-
-    <script>
-        const colors = ["blue", "green", "yellow", "orange", "pink", "purple"];
-        const color  = colors[Math.floor(Math.random() * colors.length)]
-        console.log(color);
-        document.documentElement.style.setProperty('--background-color', "var(--light-"+color+")");
-        document.documentElement.style.setProperty('--accent-color', "var(--"+color+")");
-    </script>
 </head>
 
 <body>
     <header id="header"
         style="position: sticky; top: 0px; width:100%; background-color: var(--background-color); margin:0; padding: 0;">
         <div style="display: flex;justify-content: space-between; align-items: center; flex-wrap: wrap;">
-            <a href="#">
+            <a href="#" style="text-align: center;">
                 <h1>BRUTAL</h1>
             </a>
-            <nav style="gap: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
-                <button onclick="location.href='#forms'" type="button">forms</button>
-                <button onclick="location.href='#textual'" type="button">Texts</button>
-                <button onclick="location.href='#other'" type="button">Other components</button>
+            <nav style="gap: 10px; display: flex; justify-content: center;">
+                <button onclick="location.href='index.html'" type="button">About</button>
+                <button onclick="location.href='components.html'" type="button">Meet the components</button>
+                <button onclick="location.href='#'" type="button">Demo pages</button>
             </nav>
         </div>
         <span><strong>Everything, everywhere, all classless</strong></span>
+        <hr>
+
+        <nav style="gap: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
+            <a href="#usage">Usage</a>
+            <a href="#colors">Color variation</a>
+            <a href="#hints">Hints and tips</a>
+            <a href="#acknowledgements">Acknowledgements</a>
+        </nav>
+
         <hr>
     </header>
 
@@ -62,9 +56,10 @@
             the main the main components in HTML such as Buttons and Forms.</p>
 
         <img src="https://media.tenor.com/I-CiUWVp29AAAAAC/brooklyn-nine-nine-rosa-diaz.gif"
-            alt="A cake written Brutal beign throw on a table and destroyed" width="80%"
-            style="object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
+            alt="A cake written Brutal beign throw on a table and destroyed"
+            style="object-fit: cover; display: block; margin-left: auto; margin-right: auto; width:65vw">
 
+        <h1 id="usage"># Usage</h1>
         <p>Use Brutal through CDN by putting the following into your html head:</p>
 
         <blockquote>
@@ -76,144 +71,156 @@
         <p>And, without adding any css, turn your pages from this, into that</p>
 
         <div style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap; justify-content: center;">
-            <img style="width: 40%;" src="./demo/old_forms.png" alt="">
-            <img style="width: 40%;" src="./demo/new_forms.png" alt="">
-            <!-- <img style="width: 40%;" src="./demo/old_video_page.png" alt="">
-            <img style="width: 40%;" src="./demo/styled_video_page.png" alt=""> -->
+            <img style="width: 65vw" src="./demo/old_forms.png" alt="">
+            <img style="width: 65vw" src="./demo/new_forms.png" alt="">
         </div>
 
-        <p>May I introduce some of the components:</p>
-
-        <h2 id="forms"># Forms</h2>
-
-        <!-- Form components -->
-        <form onsubmit="return false;">
-            <fieldset>
-                <legend>Please enter your information</legend>
-
-                <label for="firstname">First Name</label>
-                <input type="text" name="firstname" id="firstname">
-
-                <label for="lastname">Last Name</label>
-                <input type="text" name="lastname" id="lastname">
-
-                <label for="os">Operating System</label>
-                <select id="os">
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
-                </select>
-
-                <label for="content">Text content</label>
-                <textarea name="content" id="content" placeholder="add the content"></textarea>
-
-                <input type="submit" value="Send">
-
-            </fieldset>
-        </form>
-
-        <!-- textual components -->
-        <h2 id="textual"># Textual components</h2>
-
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <h4>Heading 4</h4>
-        <h5>Heading 5</h5>
-        <h6>Heading 6</h6>
+        <h1 id="colors"># Color variation</h1>
+        <p>You can change the background and accent colors using css variables</p>
 
         <blockquote>
-            This is a blockquote. Maecenas blandit, quam vel sodales facilisis, urna erat fringilla sem, sed
-            egestas quam erat a ipsum. Morbi fermentum odio felis, ultricies faucibus purus mattis tristique.
+            <pre><code>:root {
+    --background-color: var(--light-yellow);
+    --accent-color: var(--yellow);
+}</code></pre>
         </blockquote>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent accumsan, augue eget lacinia ullamcorper,
-            risus
-            nisl consequat turpis, sagittis molestie dui ante in nulla. Nunc sem justo, facilisis sodales elementum eu,
-            posuere
-            tincidunt tellus. Sed sed quam venenatis, faucibus ante eget, posuere massa. Quisque in sapien magna. Duis
-            dictum id
-            risus et semper. Suspendisse dui justo, tempus nec pretium vitae, semper quis mauris. Ut lacus erat, mattis
-            eu
-            ultrices a, posuere quis diam. Aenean a facilisis felis. Quisque magna felis, varius ac nisi id, pretium
-            suscipit
-            nisi. Maecenas at urna pretium, bibendum massa quis, tristique sem. Pellentesque faucibus mauris quis lacus
-            cursus
-            cursus. Quisque efficitur ut sem scelerisque scelerisque. Nulla aliquet vulputate nisi in accumsan. Integer
-            mi
-            erat,
-            scelerisque a aliquam sed, pulvinar non eros. Mauris vestibulum magna in consectetur aliquam. Duis suscipit
-            arcu
-            lectus, ac imperdiet arcu ornare ut. <strong>This is strong</strong>, <b>this is bold</b>, <em>this is
-                emphasized</em> and <a href='/'>this</a> is a link.
-        </p>
 
-        <h2 id="other"># Other components</h2>
+        <p>You can use any color you want, but some a small set is available:</p>
 
-        <h3># Lists and tables</h3>
+        <div style="display: flex; flex-wrap: wrap; flex-direction: row; justify-content: center; gap: 20px;">
+            <div class="bordered" style="width: 200px; height: 200px;">
+                <div
+                    style="background-color: var(--blue); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--blue</p>
+                </div>
+                <div
+                    style="background-color: var(--light-blue); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--light-blue</p>
+                </div>
+            </div>
+
+            <div class="bordered" style="width: 200px; height: 200px;">
+                <div
+                    style="background-color: var(--green); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--green</p>
+                </div>
+                <div
+                    style="background-color: var(--light-green); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--light-green</p>
+                </div>
+            </div>
+
+            <div class="bordered" style="width: 200px; height: 200px;">
+                <div
+                    style="background-color: var(--yellow); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--yellow</p>
+                </div>
+                <div
+                    style="background-color: var(--light-yellow); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--light-yellow</p>
+                </div>
+            </div>
+
+            <div class="bordered" style="width: 200px; height: 200px;">
+                <div
+                    style="background-color: var(--orange); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--orange</p>
+                </div>
+                <div
+                    style="background-color: var(--light-orange); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--light-orange</p>
+                </div>
+            </div>
+
+            <div class="bordered" style="width: 200px; height: 200px;">
+                <div
+                    style="background-color: var(--pink); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--pink</p>
+                </div>
+                <div
+                    style="background-color: var(--light-pink); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--light-pink</p>
+                </div>
+            </div>
+
+            <div class="bordered" style="width: 200px; height: 200px;">
+                <div
+                    style="background-color: var(--purple); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--purple</p>
+                </div>
+                <div
+                    style="background-color: var(--light-purple); width: 100%; height: 50%;display: flex;align-items: center; justify-content: center;">
+                    <p>--light-purple</p>
+                </div>
+            </div>
+        </div>
+
+        <h1 id="hints"># Hints and tips</h1>
 
         <ul>
-            <li>Unordered list item 1</li>
-            <li>Unordered list item 2</li>
-            <li>Unordered list item 3</li>
+            <li>
+                <p>Adding the following code snippet on your page will make the colors change on every update.</p>
+                <blockquote>
+                    <pre><code>const colors = ["blue", "green", "yellow", "orange", "pink", "purple"];
+const color = colors[Math.floor(Math.random() * colors.length)]
+document.documentElement.style.setProperty('--background-color', "var(--light-" + color + ")");
+document.documentElement.style.setProperty('--accent-color', "var(--" + color + ")");</code></pre>
+                </blockquote>
+            </li>
+
+            <li>
+                <p>Breaking the single rule we have, a single class is available. Use <strong>.bordered</strong> to add
+                    a hard border with shadow in any component you want.</p>
+                <div class="bordered" style="width: fit-content">
+                    <p>Use it wisely 👍</p>
+                </div>
+            </li>
         </ul>
-        <ol>
-            <li>Ordered list item 1</li>
-            <li>Ordered list item 2</li>
-            <li>Ordered list item 3</li>
-        </ol>
 
-        <table>
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Quantity</th>
-                    <th>Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Godzilla</td>
-                    <td>2</td>
-                    <td>$299.99</td>
-                </tr>
-                <tr>
-                    <td>Mozilla</td>
-                    <td>10</td>
-                    <td>$100,000.00</td>
-                </tr>
-                <tr>
-                    <td>Quesadilla</td>
-                    <td>1</td>
-                    <td>$2.22</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3># Images</h3>
-        <div style="display: flex; width:100%; justify-content: space-between; flex-wrap: wrap;">
-            <img width=300 height=300 src="https://images3.memedroid.com/images/UPLOADED751/57af4b8eaadce.jpeg"
-                alt="Two akita dogs, one is biting the head of the other in a funny way" style="object-fit: cover;">
-            <img width=300 height=300
-                src="https://bloximages.chicago2.vip.townnews.com/sfweekly.com/content/tncms/assets/v3/editorial/1/1c/11c087d8-49f0-51a7-90b6-e6891bca57ec/63b8b76d74870.image.jpg"
-                alt="The cover of Metalica's Master of the Puppets album, with a bunch of cute pink dressed dogs and master of the puppies writen in place of the album name."
-                style="object-fit: cover;">
-            <img width=300 height=300
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4WtdA5O3wdhP0W8lUm5kMJ4dsgh3VZjcRAQ&usqp=CAU"
-                alt="A light brown dog" style="object-fit: cover;">
-        </div>
+        <h1 id="acknowledgements"># Acknowledgements</h1>
+        <p>I`m not a designer (yet), just a fullstack dev that wanted to create a class css framework, so if you want to
+            know more neo brutalism design trend or how to create more complex components, here are some links i readed
+            about it</p>
+        <ul>
+            <li><a href="https://www.linkedin.com/pulse/how-can-i-design-neo-brutalism-style-sepideh-yazdi/">How can I
+                    design in the Neo Brutalism style? - Sepideh Yazdi</a></li>
+            <li><a href="https://bootcamp.uxdesign.cc/the-neubrutalism-or-neo-brutalism-ui-design-trend-641714825fed">The
+                    Neubrutalism or Neo Brutalism UI Design Trend - Elvis Hsiao</a></li>
+            <li><a href="https://www.figma.com/community/file/1209478811951634271">Neo-Brutalism UI Kit - Muhamad
+                    Digdaya</a></li>
+        </ul>
     </main>
 
     <footer>
         <hr>
-        <a href="https://github.com/VitorEstevam/Brutal">github.com/VitorEstevam/Brutal</a>
-        <p>Project Under MIT license</p>
-        <p>Made in Brazil</p>
-    </footer>
+        <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between; flex-wrap: wrap;">
+            <p>
+                <a href="https://github.com/VitorEstevam/Brutal">github.com/VitorEstevam/Brutal</a>
+            </p>
+            <p>Project Under MIT license</p>
 
+            <div style="display: flex; flex-direction: row; gap: 5px;">
+                <p>Made in Brazil</p>
+                <img style="width: 30px; border: 0; box-shadow: none;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg" alt="Brazil`s flag">
+            </div>
+            <div style="display: flex; flex-direction: row; gap: 5px;">
+                <p>Support trans rights</p>
+                <img style="width: 30px; border: 0; box-shadow: none;"
+                    src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Transgender_Pride_flag.svg"
+                    alt="Trans flag">
+            </div>
+        </div>
+    </footer>
 </body>
+
 <script>
     document.documentElement.style.scrollPaddingTop = document.getElementById("header").offsetHeight + "px";
+
+    const colors = ["blue", "green", "yellow", "orange", "pink", "purple"];
+    const color = colors[Math.floor(Math.random() * colors.length)]
+    document.documentElement.style.setProperty('--background-color', "var(--light-" + color + ")");
+    document.documentElement.style.setProperty('--accent-color', "var(--" + color + ")");
 </script>
 
 </html>
