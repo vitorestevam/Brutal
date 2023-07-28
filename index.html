@@ -33,11 +33,11 @@
 
 <body>
     <header id="header" style="position: sticky; top: 0px;background-color: var(--background-color); margin:0px auto;">
-        <div style="display: flex;justify-content: space-between; align-items: center;">
+        <div style="display: flex;justify-content: space-between; align-items: center; flex-wrap: wrap;">
             <a href="#">
                 <h1>BRUTAL</h1>
             </a>
-            <nav style="gap: 10px; display: flex;">
+            <nav style="gap: 10px; display: flex; flex-wrap: wrap; justify-content: center;">
                 <button onclick="location.href='#forms'" type="button">forms</button>
                 <button onclick="location.href='#textual'" type="button">Texts</button>
                 <button onclick="location.href='#other'" type="button">Other components</button>
@@ -53,7 +53,7 @@
             the main the main components in HTML such as Buttons and Forms.</p>
 
         <img src="https://media.tenor.com/I-CiUWVp29AAAAAC/brooklyn-nine-nine-rosa-diaz.gif"
-            alt="A cake written Brutal beign throw on a table and destroyed" width=700 height="400"
+            alt="A cake written Brutal beign throw on a table and destroyed" width="80%"
             style="object-fit: cover; display: block; margin-left: auto; margin-right: auto;">
 
         <p>Use Brutal through CDN by putting the following into your html head:</p>
@@ -67,10 +67,10 @@
         <p>And, without adding any css, turn your pages from this, into that</p>
 
         <div style="display: flex; flex-direction: row; gap: 20px; flex-wrap: wrap; justify-content: center;">
-            <img style="width: 40%;" src="./demo/old_video_page.png" alt="">
-            <img style="width: 40%;" src="./demo/styled_video_page.png" alt="">
             <img style="width: 40%;" src="./demo/old_forms.png" alt="">
             <img style="width: 40%;" src="./demo/new_forms.png" alt="">
+            <!-- <img style="width: 40%;" src="./demo/old_video_page.png" alt="">
+            <img style="width: 40%;" src="./demo/styled_video_page.png" alt=""> -->
         </div>
 
         <p>May I introduce some of the components:</p>
@@ -182,7 +182,7 @@
         </table>
 
         <h3># Images</h3>
-        <div style="display: flex; width:100%; justify-content: space-between;">
+        <div style="display: flex; width:100%; justify-content: space-between; flex-wrap: wrap;">
             <img width=300 height=300 src="https://images3.memedroid.com/images/UPLOADED751/57af4b8eaadce.jpeg"
                 alt="Two akita dogs, one is biting the head of the other in a funny way" style="object-fit: cover;">
             <img width=300 height=300
