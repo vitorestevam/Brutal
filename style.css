@@ -18,19 +18,13 @@
 }
 
 body {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 10px;
     font-family: 'Public Sans';
     line-height: 1.4;
-    padding: 0;
-    margin: 0;
     color: black;
     background: var(--background-color);
-}
-
-
-main {
-    max-width: 80rem;
-    margin: 20px auto;
-    padding: 0 10px;
 }
 
 /* headings */
@@ -105,6 +99,11 @@ ul {
     list-style-type: square
 }
 
+pre {
+    white-space: pre-wrap;
+    word-wrap: break-word; 
+}
+
 blockquote {
     border: 0.25rem solid black;
     box-shadow: 0.25rem 0.25rem black;
@@ -115,7 +114,7 @@ blockquote {
     padding: 1px 2px;
 }
 
-iframe{
+iframe {
     border: 0.25rem solid black;
     box-shadow: 0.25rem 0.25rem black;
 }
@@ -153,8 +152,9 @@ select,
 textarea {
     height: 3rem;
     margin: 10px 0px;
+    width: calc(100% - 10px);
+    margin: 20px auto;
 
-    width: 99%;
     box-sizing: inherit;
 
     border: 0.25rem solid black;
