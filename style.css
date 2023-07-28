@@ -2,7 +2,7 @@
     --blue: #87CEEB;
     --green: #90EE90;
     --yellow: #F4D738;
-    --red: #FF7A5C;
+    --orange: #FF7A5C;
     --pink: #FFB2EF;
     --purple: #A388EE;
 
@@ -35,6 +35,11 @@ h4,
 h5,
 h6 {
     font-family: 'Kanit';
+}
+
+.bordered{
+    border: 0.25rem solid black;
+    box-shadow: 0.25rem 0.25rem black;
 }
 
 /* button */
