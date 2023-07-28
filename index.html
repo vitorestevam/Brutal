@@ -29,10 +29,19 @@
             padding: 0px 10px;
         }
     </style>
+
+    <script>
+        const colors = ["blue", "green", "yellow", "orange", "pink", "purple"];
+        const color  = colors[Math.floor(Math.random() * colors.length)]
+        console.log(color);
+        document.documentElement.style.setProperty('--background-color', "var(--light-"+color+")");
+        document.documentElement.style.setProperty('--accent-color', "var(--"+color+")");
+    </script>
 </head>
 
 <body>
-    <header id="header" style="position: sticky; top: 0px; width:100%; background-color: var(--background-color); margin:0; padding: 0;">
+    <header id="header"
+        style="position: sticky; top: 0px; width:100%; background-color: var(--background-color); margin:0; padding: 0;">
         <div style="display: flex;justify-content: space-between; align-items: center; flex-wrap: wrap;">
             <a href="#">
                 <h1>BRUTAL</h1>
